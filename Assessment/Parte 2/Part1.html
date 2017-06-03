@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <title>Guessing Game</title>
+</head>
+    <body onload="do_game()" id="body">
+        <script>
+        	var target;             
+			var guess_input;
+			var random_number_integer;      
+			var finished = false;   
+			var guesses = 0;
+			var colors = ["red", "blue", "yellow", "grey", "green", "indigo", "turquoise"];
+
+			function do_game() {
+			    var random_number = Math.random() * 7;
+			    random_number_integer = Math.floor(random_number);
+			    target = colors[random_number_integer];
+			    console.log(random_number_integer);
+
+			    while (!finished) {
+			        guess_input = prompt("I am thinking of a color "+
+			                             "in the range of red, blue, yellow, grey, green, indigo or turquoise.\n\n"+
+			                             "What is the color?");
+			        guesses += 1;   
+			        if (target.localeCompare(guess_input)==0) {
+			       		 alert("You got it! color was " + target + 
+			          		".\n\nIt took you " + guesses + 
+			          		" guesses to get the color!");
+						break;
+			   		 }
+			    }
+			}
+
+			
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assessment</title>
+        <meta name="author" content="Maria Bracamonte">
+    </head>
+    <body>
+    	<h1> Please Enter Your Details for our dating Website! </h1>
+    	<br>
+        <form method="post" enctype="multipart/form-data" 
+      action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+			<fieldset>
+			<!--Person image -->
+				<legend>Your Face</legend>
+				<label for="image">Your image: </label> 
+				<input type="file" id="image" name="fileToUpload" require><br>
+			<!-- Image preview-->
+				<label for="preview">Image preview: </label>
+				<img src="" id="preview"> <br>
+			</fieldset> <br>
+
+			<fieldset>
+				<legend>Your General Details</legend>
+			<!-- Person name -->
+				<label for="name">Name: </label>
+				<input type="text" id="name" name="Name" placeholder="Your full name" required> <br>
+			<!-- Person gender -->
+				<label>Gender: </label>
+				<input type="radio" name="gender" value="female">Female 
+				<input type="radio"  name="gender" value="male" checked>Male <br>
+			<!-- Person age-->
+				<label for="age">Age:</label>
+				<input type="number" min="0" max="150" step="1" value="18" id="age" name="age" required><br>
+  			<!-- Person Birth-->
+  				<label for="birthday">Date of birth:</label>
+ 				<input type="date" id="birthday" name="birthday" required><br>
+ 			<!-- Person favorite color-->
+ 				<label for="color">Favorite color:</label>
+ 				<input type="color" id="color" name="color"> <br>
+ 			<!-- Person country -->
+ 				<label for="country">Which country</label>
+				<select name="cities">
+					<option value="ccs">Caracas</option>
+					<option value="ws">Washintong DC</option>
+					<option value="li">Lima</option>
+					<option value="ec">Ecuador</option>
+					<option value="cmx">Ciudad de Mexico</option>
+					<option value="ba">Buenos Aires</option>
+					<option value="ch">Chile</option>
+					<option value="br">Brazilia</option>
+					<option value="bo">Bogota</option>
+				</select>
+			</fieldset> <br>
+			<fieldset>
+				<legend>Your Indicators</legend>
+			<!-- Person height-->
+				<label for="height">Height: </label> 
+				Short <input type="range" min="0" max="100" step="5" value="50" id="height" name="height"> Tall<br>
+			<!--Person salary -->
+				<label for="salary">Salary: </label> 
+				Poor <input type="range" min="0" max="100" step="5" value="50" id="salary" name="salary"> Rich<br>
+			</fieldset> <br>
+			<fieldset>
+				<legend>Your Contact information</legend>
+			<!--Person email -->
+				<label for="email">Email: </label>
+				<input type="email" id="email" name="Email" placeholder="Your email" required><br>
+			<!-- Person mobile -->
+				<label for="mobile">Mobile: </label>
+				<input type="tel" id="mobile" name="Mobile" placeholder="Your telephone">
+				<br>
+			<!-- Person address-->
+				<label for="address">Address</label>
+				<textarea rows="3" cols="19" name="Address" id="address"> </textarea> 
+				<br>
+			<!--Person method to contact -->
+				<label>Method to contact you: </label>
+				<input type="checkbox" name="method" value="email">Email 
+				<input type="checkbox" name="method" value="whatsapp">Whatsapp
+				<input type="checkbox" name="method" value="appChat">In-app chat  
+			</fieldset> <br>
+			<input type="submit" value="Submit">
+</form>
+    </body>
+</html>

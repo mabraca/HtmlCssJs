@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assessment</title>
+        <meta name="author" content="Maria Bracamonte">
+    </head>
+    <body>
+    	<h1> Please Enter Your Details for our dating Website! </h1>
+    	<br>
+        <form method="post" enctype="multipart/form-data" 
+      action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+			<fieldset>
+			<!--Person image -->
+				<legend>Your Face</legend>
+				<label for="image">Your image: </label> 
+				<input type="file" id="image" name="fileToUpload" require><br>
+			<!-- Image preview-->
+				<label for="preview">Image preview: </label>
+				<img id="preview"> <br>
+			</fieldset> <br>
+
+			<fieldset>
+				<legend>Your General Details</legend>
+			<!-- Person name -->
+				<label for="name">Name: </label>
+				<input type="text" id="name" name="Name" placeholder="Your full name" required> <br>
+			<!-- Person gender -->
+				<label for="gender">Gender: </label>
+				<input type="radio" class="gender" name="gender" value="female">Female 
+				<input type="radio" class="gender" name="gender" value="male" checked>Male <br>
+			<!-- Person age-->
+				<label for="age">Age:</label>
+				<input type="number" min="0" max="150" step="1" value="18" id="age" name="age" required><br>
+  			<!-- Person Birth-->
+  				<label for="birthday">Date of birth:</label>
+ 				<input type="date" id="birthday" name="birthday" required><br>
+ 			<!-- Person favorite color-->
+ 				<label for="color">Favorite color:</label>
+ 				<input type="color" id="color" name="color"> <br>
+ 			<!-- Person country -->
+ 				<label for="country">Which country</label>
+				<select name="cities">
+					<option value="ccs">Caracas</option>
+					<option value="ws">Washintong DC</option>
+					<option value="li">Lima</option>
+					<option value="ec">Ecuador</option>
+					<option value="cmx">Ciudad de Mexico</option>
+					<option value="ba">Buenos Aires</option>
+					<option value="ch">Chile</option>
+					<option value="br">Brazilia</option>
+					<option value="bo">Bogota</option>
+				</select>
+			</fieldset> <br>
+			<fieldset>
+				<legend>Your Indicators</legend>
+			<!-- Person height-->
+				<label for="height">Height: </label> 
+				<p class="burgundy">Short</p> <input type="range" min="0" max="100" step="5" value="50" id="height" name="height"><p class="purple"> Tall</p><br>
+			<!--Person salary -->
+				<label for="salary">Salary: </label> 
+				<p class="burgundy2">Poor   </p><input type="range" min="0" max="100" step="5" value="50" id="salary" name="salary"> <p class="purple2">Rich</p><br>
+			</fieldset> <br>
+			<fieldset>
+				<legend>Your Contact information</legend>
+			<!--Person email -->
+				<label for="email">Email: </label>
+				<input type="email" id="email" name="Email" placeholder="Your email" required><br>
+			<!-- Person mobile -->
+				<label for="mobile">Mobile: </label>
+				<input type="tel" id="mobile" name="Mobile" placeholder="Your telephone">
+				<br>
+			<!-- Person address-->
+				<label class="dir" for="address">Address:</label>
+				<textarea id="address" > </textarea> 
+				<br>
+			<!--Person method to contact -->
+				<br>
+				<label for="method">Method to contact you: </label>
+				<input type="checkbox" name="method" class="method" value="email">Email 
+				<input type="checkbox" class="method" name="method" value="whatsapp">Whatsapp
+				<input type="checkbox" class="method" name="method" value="appChat">In-app chat  
+			</fieldset> <br>
+			<input type="submit" value="Submit">
+		</form>
+	<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+	</body>
+    <!-- Style part -->
+	 <style>
+	fieldset{
+		background: lightyellow;
+		width: 720px;
+		border: 10px solid yellow;
+		margin-bottom: 10px;
+	
+	}
+	label{
+		width: 180px;
+		display: inline-block;
+		text-align:right;
+	}
+	textarea{
+		width: 360px;
+		height: 50px;
+		margin-left: 184px;
+	}
+	p {	color: white;
+		margin-bottom: 0px;
+		padding: 5px;
+		margin-top: 0px;
+		display: inline-block;
+		text-align:center;
+		}
+
+	p.outset {outline-style: outset;}
+	
+	.method .gender {
+		width: auto;
+		text-align: center;
+		position: absolute;
+	}
+	
+	.burgundy{
+		background-color: #A62A24;
+		border: 1px solid #A62A24;
+    	outline-color: #A62A24;
+		border-bottom-width: 0px;
+    	padding-bottom: 10px;
+
+	
+	}
+	
+	
+	.burgundy2{
+		background-color: #A62A24;
+		padding-left: 8px;
+    	padding-right: 7px;
+		padding-top: 10px;
+	    border-top-width: 0px;
+		margin-right: 4px;
+		text-align: center;
+		border: 1px solid #A62A24;
+    	outline-color: #A62A24;
+	}
+	
+	
+	.purple{
+		background-color: #832F82;
+		border-bottom-width: 0px;
+    	padding-bottom: 9px;
+    	border: 1px solid #832F82;
+    	outline-color: #832F82;
+    	margin-left: 4px;
+    	border-right-width: 1px;
+    	padding-right: 10px;
+		padding-left: 10px;
+
+
+	}
+	.purple2{
+		background-color: #832F82;
+		padding-top: 10px;
+	    border-top-width: 0px;
+	    border: 1px solid #832F82;
+    	outline-color: #832F82;
+    	padding-right: 7px;
+    	padding-left: 8px;
+
+		
+	}
+	.dir{
+		position:absolute
+	}
+	#preview{
+		width: 200px;
+		vertical-align: top;
+		
+	}
+	label:hover { font-size:40px }
+
+	 </style>
+
+	
+</html>
